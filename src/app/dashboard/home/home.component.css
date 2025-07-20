@@ -1,0 +1,48 @@
+.container-fluid{
+    position: relative;
+    top: 200px;
+    position: fixed;
+    z-index: 0;
+}
+.container-fluid h2{
+    background-color: rgb(237, 244, 245);
+    padding: 10px;
+    border-radius: 5px;
+}
+.row .col a{
+    margin: 0px 10px;
+}
+#my-card{
+    height: 29.5vh;
+    max-height: 29.5vh;
+    overflow-y: auto;
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+#my-card a{
+    float: right;
+    padding: 10px;
+    color: red;
+}
+#my-card a mat-icon{
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+    top: -10px;
+}
+#left-col{
+    height: 36vh;
+    max-height: 36vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+#left-col mat-card{
+    margin: 12px 0px;
+    position: relative;
+    top: -10px;
+}
+#all-request{
+    position: relative;
+    top: -30px;
+    background-color: red;
+}

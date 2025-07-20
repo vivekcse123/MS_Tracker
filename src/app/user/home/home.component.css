@@ -1,0 +1,31 @@
+.container-fluid{
+    position: relative;
+    top: 200px;
+    z-index: 0;
+    position: fixed;
+}
+.container-fluid h2{
+    background-color: rgb(237, 244, 245);
+    padding: 10px;
+    border-radius: 5px;
+}
+#left-col mat-card{
+    margin: 10px 0px;
+}
+#my_date{
+    font-size: 20px;
+}
+#right-col{
+    height: 39vh;
+    max-height: 39vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+#request{
+    font-size: 20px;
+}
+#my_notes{
+    max-height: 26vh;
+    height: 26vh;
+    overflow-y: auto;
+}

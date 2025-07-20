@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <img src="assets/images/p_image.jpg" alt="">
+        </div>
+        <div class="col">
+            <div class="container">
+                <h1>Welcome to M-Tracker | <span style="color: green;">Login</span></h1>
+            </div>
+            <form [formGroup]="loginForm" (submit)="login($event)">
+
+                <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username" formControlName="email" name="email">
+                <div *ngIf="loginForm.get('email')?.invalid && submitted">
+                    <small *ngIf="loginForm.get('email')?.errors?.['required']" class="alert alert-danger">
+                        Username is required!
+                    </small>
+                </div>
+                </div>
+
+                <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" formControlName="password" name="password">
+                <div *ngIf="loginForm.get('password')?.invalid && submitted">
+                    <small *ngIf="loginForm.get('password')?.errors?.['required']" class="alert alert-danger">
+                        Password is required!
+                    </small>
+                </div>
+                </div>
+                
+                <div *ngIf="error" class="alert alert-danger">
+                    {{ error }}
+                </div>
+                <div *ngIf="error" class="alert alert-success">
+                    {{ success }}
+                </div>
+                <div *ngIf="isLoading" class="spinner-border text-success" role="status">
+                    <span class="sr-only"></span>
+                </div>
+                <button class="btn btn-primary">Login</button>
+                <span>Don't have an account? <a routerLink="/auth/signup">SignUp</a> <span id="f_pass"><a routerLink="/auth/forgot">Forgot Password</a></span></span>
+            </form>
+        </div>
+    </div>
+</div>
+<div>

@@ -1,0 +1,17 @@
+.container-fluid{
+    position: relative;
+    top: 200px;
+    z-index: 0;
+    position: fixed;
+}
+.container-fluid h2{
+    background-color: rgb(237, 244, 245);
+    padding: 10px;
+    border-radius: 5px;
+}
+mat-divider{
+    padding: 10px;
+}
+mat-list-item p{
+    font-size: 18px;
+}

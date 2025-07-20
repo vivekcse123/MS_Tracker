@@ -1,0 +1,401 @@
+{
+  "admins": [
+    {
+      "id": "1",
+      "fname": "Vivek Verma",
+      "email": "vermavivek0402@gmail.com",
+      "gender": "male",
+      "mobile": "8429608353",
+      "password": "vivek123",
+      "cpassword": "vivek123",
+      "password_hint": "vivu123"
+    },
+    {
+      "id": "b2fe",
+      "fname": "Revathi Satya",
+      "email": "revu123@gmail.com",
+      "gender": "female",
+      "mobile": "6303289441",
+      "password": "Revathi456",
+      "cpassword": "Revathi456",
+      "password_hint": "revathi456"
+    },
+    {
+      "id": "4dd0",
+      "fname": "Aman Gupta",
+      "email": "aman123@gmail.com",
+      "gender": "male",
+      "mobile": "8923542225",
+      "password": "aman12",
+      "cpassword": "aman12",
+      "password_hint": "ammu12"
+    },
+    {
+      "id": "090f",
+      "fname": "Md Arif",
+      "email": "arif12@gmail.com",
+      "gender": "male",
+      "mobile": "8934233423",
+      "password": "arif12",
+      "cpassword": "arif12",
+      "password_hint": "aru12"
+    },
+    {
+      "id": "4610",
+      "fname": "Shriansh Kumar",
+      "email": "shriansh113@gmail.com",
+      "gender": "male",
+      "mobile": "8934324435",
+      "password": "Shri123",
+      "cpassword": "Shri123",
+      "password_hint": "Baby12"
+    }
+  ],
+  "users": [
+    {
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "mobile": "6303289441",
+      "p_date": "2024-12-24",
+      "created_date": "2024-11-24",
+      "department": "Content",
+      "reporting_manager": "Krishna",
+      "password": "revu123",
+      "id": "1"
+    }
+  ],
+  "departments": [
+    {
+      "department": "Content",
+      "managers": [
+        {
+          "name": "Krishna"
+        },
+        {
+          "name": "kiran"
+        }
+      ],
+      "id": "d019"
+    },
+    {
+      "department": "Sales & Marketing",
+      "managers": [
+        {
+          "name": "Anubhav"
+        },
+        {
+          "name": "Parash"
+        }
+      ],
+      "id": "1b16"
+    },
+    {
+      "department": "MGA",
+      "managers": [
+        {
+          "name": "Tammali"
+        }
+      ],
+      "id": "f777"
+    }
+  ],
+  "notes": [],
+  "usernotes": [
+    {
+      "id": "54a8",
+      "userid": "1",
+      "note": "Hey jayanti kindly approve my leave request"
+    },
+    {
+      "id": "2365",
+      "userid": "73c9",
+      "note": "Hey ma'am kindly approve my WFH"
+    },
+    {
+      "id": "7865",
+      "userid": "1",
+      "note": "I need to apply for WFH to Jayanti ma'am...."
+    }
+  ],
+  "wfh": [
+    {
+      "id": "ede7",
+      "name": "Nandini awala",
+      "email": "nandu12@gmail.com",
+      "p_date": "22/12/2024",
+      "message": "Approval granted on 22/12/2024, 20:05:16",
+      "status": "approved",
+      "isHidden": true
+    },
+    {
+      "id": "617f",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "22/12/2024",
+      "message": "Rejection granted on 22/12/2024, 20:06:22",
+      "status": "Reject",
+      "isHidden": true
+    },
+    {
+      "id": "655e",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "22/12/2024",
+      "message": "Approval granted on 22/12/2024, 20:45:06",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "21c9",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "22/12/2024",
+      "message": "Approval granted on 22/12/2024, 21:50:03",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "60a9",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "23/12/2024",
+      "message": "Approval granted on 23/12/2024, 23:27:38",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "a919",
+      "name": "Sarika Singh",
+      "email": "sarika123@gmail.com",
+      "p_date": "23/12/2024",
+      "message": "Approval granted on 23/12/2024, 23:30:33",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "d3ff",
+      "name": "Sarika Singh",
+      "email": "sarika123@gmail.com",
+      "p_date": "23/12/2024",
+      "message": "Approval rejected on 23/12/2024, 23:42:00",
+      "status": "Rejected",
+      "isHidden": true
+    },
+    {
+      "id": "e4ab",
+      "name": "Sarika Singh",
+      "email": "sarika123@gmail.com",
+      "p_date": "23/12/2024",
+      "message": "Approval rejected on 23/12/2024, 23:52:48",
+      "status": "Rejected",
+      "isHidden": true
+    },
+    {
+      "id": "458c",
+      "name": "Sarika Singh",
+      "email": "sarika123@gmail.com",
+      "p_date": "23/12/2024",
+      "message": "Approval granted on 23/12/2024, 23:56:10",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "fdc0",
+      "name": "Sarika Singh",
+      "email": "sarika123@gmail.com",
+      "p_date": "23/12/2024",
+      "message": "Approval rejected on 23/12/2024, 23:56:23",
+      "status": "Rejected",
+      "isHidden": true
+    },
+    {
+      "id": "e2dd",
+      "name": "Sarika Singh",
+      "email": "sarika123@gmail.com",
+      "p_date": "23/12/2024",
+      "message": "Approval rejected on 24/12/2024, 00:01:43",
+      "status": "Rejected",
+      "isHidden": true
+    },
+    {
+      "id": "52e8",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "24/12/2024",
+      "message": "Approval granted on 24/12/2024, 00:06:10",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "45f5",
+      "name": "Sarika Singh",
+      "email": "sarika123@gmail.com",
+      "p_date": "24/12/2024",
+      "message": "Approval rejected on 24/12/2024, 00:06:11",
+      "status": "Rejected",
+      "isHidden": true
+    },
+    {
+      "id": "f7af",
+      "name": "Nandini awala",
+      "email": "nandu12@gmail.com",
+      "p_date": "24/12/2024",
+      "message": "Approval rejected on 24/12/2024, 00:16:06",
+      "status": "Rejected",
+      "isHidden": true
+    },
+    {
+      "id": "538f",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "24/12/2024",
+      "message": "Approval granted on 24/12/2024, 00:16:09",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "1171",
+      "name": "Nandini awala",
+      "email": "nandu12@gmail.com",
+      "p_date": "24/12/2024",
+      "message": "Approval rejected on 24/12/2024, 00:24:09",
+      "status": "Rejected",
+      "isHidden": true
+    },
+    {
+      "id": "ff1e",
+      "name": "Nandini awala",
+      "email": "nandu12@gmail.com",
+      "p_date": "24/12/2024",
+      "message": "Approval granted on 24/12/2024, 00:24:58",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "8006",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "24/12/2024",
+      "message": "Approval granted on 24/12/2024, 00:24:59",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "259e",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "26/12/2024",
+      "message": "Approval granted on 26/12/2024, 23:48:55",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "b658",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "26/12/2024",
+      "message": "Approval granted on 26/12/2024, 23:51:29",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "5083",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "26/12/2024",
+      "message": "Approval granted on 26/12/2024, 23:54:30",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "1097",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "26/12/2024",
+      "message": "Approval granted on 26/12/2024, 23:56:11",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "700b",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "26/12/2024",
+      "message": "Approval granted on 26/12/2024, 23:57:23",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "ce34",
+      "name": "Nandini awala",
+      "email": "nandu12@gmail.com",
+      "p_date": "27/12/2024",
+      "message": "Approval rejected on 27/12/2024, 00:24:22",
+      "status": "Rejected",
+      "isHidden": true
+    },
+    {
+      "id": "498f",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "27/12/2024",
+      "message": "Approval rejected on 27/12/2024, 00:24:23",
+      "status": "Rejected",
+      "isHidden": true
+    },
+    {
+      "id": "a472",
+      "name": "Sibani Mohanti",
+      "email": "sibani12@gmail.com",
+      "p_date": "27/12/2024",
+      "message": "Approval granted on 27/12/2024, 23:33:24",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "56ea",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "06/01/2025",
+      "message": "Approval rejected on 06/01/2025, 21:57:56",
+      "status": "Rejected",
+      "isHidden": true
+    },
+    {
+      "id": "8620",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "14/01/2025",
+      "message": "Approval granted on 14/01/2025, 11:49:32",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "0388",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "15/01/2025",
+      "message": "Approval granted on 15/01/2025, 17:38:04",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "f751",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "19/01/2025",
+      "message": "Approval granted on 19/01/2025, 20:19:47",
+      "status": "Approved",
+      "isHidden": true
+    },
+    {
+      "id": "9b20",
+      "name": "Revathi Satya",
+      "email": "revathisatya12@gmail.com",
+      "p_date": "13/03/2025",
+      "message": "Approval granted on 13/03/2025, 10:04:56",
+      "status": "Approved",
+      "isHidden": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+.container-fluid{
+    position: relative;
+    top: 200px;
+    z-index: 0;
+    position: fixed;
+}
+.container-fluid h2{
+    background-color: rgb(237, 244, 245);
+    padding: 10px;
+    border-radius: 5px;
+}
+form{
+    height: 55vh;
+    max-height: 55vh;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+form input, select{
+    width: 97%;
+    padding: 15px;
+    margin: 15px auto;
+}
+form button{
+    padding: 14px 30px;
+    margin: 0px 30px;
+}
+small{
+    margin: 10px 30px;
+    padding: 10px;
+    position: relative;
+    top: -10px;
+} 

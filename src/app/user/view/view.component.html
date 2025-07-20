@@ -1,0 +1,32 @@
+<app-user-header></app-user-header>
+<div class="container-fluid">
+    <h2>User -> Home -> Profile</h2>
+    <hr>
+    <h2>Your Profile</h2>
+    <div class="row-2">
+        <div class="col">
+            <mat-card>
+                <mat-list>
+                    <mat-list-item><p>Name: {{userDetails?.name}}</p></mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item><p>Email:  {{userDetails?.email}}</p></mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item><p>Mobile:  {{userDetails?.mobile}}</p></mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item><p>Period Date: {{userDetails?.p_date}}</p></mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item><p>Created Date: {{userDetails?.created_date}}</p></mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item><p>Department: {{userDetails?.department}}</p></mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item><p>Reporting Manager: {{userDetails?.reporting_manager}}</p></mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <a class="btn btn-primary" routerLink="/user/{{userId}}/home">Go to Home</a>
+                    </mat-list-item>
+                </mat-list>
+            </mat-card>
+        </div>
+    </div>
+</div>
+<app-user-footer></app-user-footer>

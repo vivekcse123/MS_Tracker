@@ -1,0 +1,59 @@
+/* .container-lg{
+    position: relative;
+    top: 200px;
+}
+.container-fluid{
+    max-height: 60vh;
+    height: 60vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+.user-card{
+    margin-bottom: 16px;
+}
+.user-card mat-list-item{
+    padding: 10px;
+}
+.user-card mat-list-item p{
+    font-size: 20px;
+}
+.justify-right { 
+    display: flex; 
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+.row{
+    margin: auto;
+}
+mat-icon{
+    position: relative;
+    top: 5px;
+}
+#total{
+    font-size: 20px;
+} */
+
+.container-fluid{
+    position: relative;
+    top: 200px;
+    z-index: 0;
+    position: fixed;
+}
+.container-fluid h2{
+    background-color: rgb(237, 244, 245);
+    padding: 10px;
+    border-radius: 5px;
+}
+.row-2{
+    height: 60vh;
+    max-height: 60vh;
+    overflow: auto;
+    scroll-behavior: smooth;
+    font-size: 18px;
+}
+mat-list-item p{
+    font-size: 20px;
+}
+mat-divider{
+    padding: 10px;
+}

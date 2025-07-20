@@ -1,0 +1,50 @@
+.container-fluid{
+    position: relative;
+    top: 200px;
+    z-index: 0;
+    position: fixed;
+}
+.container-fluid h2{
+    background-color: rgb(237, 244, 245);
+    padding: 10px;
+    border-radius: 5px;
+}
+table{
+    margin: auto;
+    text-align: center;
+    max-height: 55vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+table th{
+    padding: 20px;
+    font-size: 18px;
+}
+table th td{
+    font-size: 18px;
+}
+.my_style{
+    margin: 0px 5px;
+    padding: 8px 20px;
+}
+.my_th_style{
+    padding: 12px;
+    font-size: 22px;
+}
+.my_td_style{
+    padding: 10px;
+    font-size: 20px;
+}
+mat-icon{
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+}
+.no{
+    color: red;
+}
+.yes{
+    color: green;
+}

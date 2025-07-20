@@ -1,0 +1,57 @@
+.container-fluid{
+    height: 100vh;
+    position: fixed;
+    padding: 10px;
+}
+.container-fluid img{
+    margin: 0px 100px;
+}
+.container h1{
+    letter-spacing: 4px;
+    font-size: 50px;
+}
+.col{
+    margin: 200px 0px;
+}
+.col form{
+    padding: 10px;
+    margin: 30px 0px;
+}
+.col form input{
+    padding: 15px;
+    margin: 25px 0px;
+    font-size: 18px;
+}
+.col form button{
+    padding: 15px 50px;
+    font-size: 18px;
+}
+.col form span{
+    margin: 0px 20px;
+    font-size: 20px;
+}
+.col form span a{
+    margin: 0px 5px;
+}
+.col form span #f_pass{
+   float: right;
+   margin: 10px 0px;
+}
+small{
+    color: red;
+    position: relative;
+    top: -20px;
+    font-size: 16px;
+    display: block;
+}
+.spinner-border{
+    margin: 0px 2px;
+}
+/* .otp_field{
+    margin: 40px 0px;
+    width: 20%;
+    position: relative;
+    top: 20px;
+    left: 50px;
+    padding: 10px;
+} */

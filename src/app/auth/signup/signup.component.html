@@ -1,0 +1,123 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <img src="assets/images/p_image.jpg" alt="" />
+      </div>
+      <div class="col">
+        <div class="container">
+          <h1>Welcome to M-Tracker | <span style="color: green;">SignUp</span></h1>
+        </div>
+        <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+          <!--name-->
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Full Name" formControlName="fname"/>
+          <div *ngIf="submitted && signUpForm.get('fname')?.invalid">
+            <small *ngIf="signUpForm.get('fname')?.errors?.['required']" class="alert alert-danger">
+              Name is required!
+            </small>
+            <small *ngIf="signUpForm.get('fname')?.errors?.['minlength']" class="alert alert-danger">
+              Name can't be less than 5 characters!
+            </small>
+            <small *ngIf="signUpForm.get('fname')?.errors?.['pattern']" class="alert alert-danger">
+              Invalid Name!
+            </small>
+          </div>
+          </div>
+          <!--email-->
+          <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email" formControlName="email"/>
+          <div *ngIf="submitted && signUpForm.get('email')?.invalid">
+            <small *ngIf="signUpForm.get('email')?.errors?.['required']" class="alert alert-danger">
+              Email is required!
+            </small>
+            <small *ngIf="signUpForm.get('email')?.errors?.['email']" class="alert alert-danger">
+              Invalid Email!
+            </small>
+          </div>
+          </div>
+
+          <!--gender-->
+          <div class="form-group">
+              <input class="form-check-input" type="radio" name="gender" value="male" formControlName="gender" />
+              <label>Male</label>
+              <input class="form-check-input" type="radio" name="gender" value="female" formControlName="gender"/>
+            <label for="">Female</label>
+            <div *ngIf="submitted && signUpForm.get('gender')?.invalid">
+              <small *ngIf="signUpForm.get('gender')?.errors?.['required']" class="alert alert-danger">
+                Gender is required!
+              </small>
+            </div>
+          </div>
+
+          <!--mobile-->
+          <input type="text" class="form-control" placeholder="Mobile" formControlName="mobile"/>
+          <div *ngIf="submitted && signUpForm.get('mobile')?.invalid">
+            <small *ngIf="signUpForm.get('mobile')?.errors?.['required']" class="alert alert-danger">
+              Mobile is required!
+            </small>
+            <small *ngIf="signUpForm.get('mobile')?.errors?.['pattern']" class="alert alert-danger">
+              Invalid mobile!
+            </small>
+          </div>
+
+          <!--password-->
+          <div class="form-group">
+          <input type="password" class="form-control" placeholder="Password" formControlName="password"
+          />
+          <div *ngIf="submitted && signUpForm.get('password')?.invalid">
+            <small *ngIf="signUpForm.get('password')?.errors?.['required']" class="alert alert-danger">
+              Password is required!
+            </small>
+            <small *ngIf="signUpForm.get('password')?.errors?.['minlength']" class="alert alert-danger">
+              Password can't be less than 5 characters!
+            </small>
+            <small *ngIf="signUpForm.get('password')?.errors?.['pattern']">
+              Invalid password. It should contain at least one uppercase letter, one lowercase letter, and one digit.
+            </small>
+          </div>
+          </div>
+
+          <!--confirm password-->
+          <div class="form-group">
+          <input type="password" class="form-control" placeholder="Confirm Password" formControlName="cpassword"/>
+          <div *ngIf="submitted && signUpForm.get('cpassword')?.invalid">
+            <small *ngIf="signUpForm.get('cpassword')?.errors?.['required']" class="alert alert-danger">
+              Confirm Password is required!
+            </small>
+          </div>
+          </div>
+
+          <!--Password hint-->
+          <div class="form-group">
+          <input type="text" class="form-control" placeholder="Password Hint: Nickname / Teacher name / School name, etc" formControlName="password_hint"/>
+          <div *ngIf="submitted && signUpForm.get('password_hint')?.invalid">
+            <small *ngIf="signUpForm.get('password_hint')?.errors?.['required']" class="alert alert-danger">
+              Password hint is required!
+            </small>
+            <small *ngIf="signUpForm.get('password_hint')?.errors?.['minlength']" class="alert alert-danger">
+              Password hint can't be less than 5 characters!
+            </small>
+            <small *ngIf="signUpForm.get('password_hint')?.errors?.['pattern']" class="alert alert-danger">
+              Invalid hint! Special characters are not allowed.
+            </small>
+          </div>
+          </div>
+
+          
+          <div *ngIf="error" class="alert alert-danger">
+            {{ error }}
+        </div>
+        <div *ngIf="success" class="alert alert-success">
+          {{ success }}
+      </div>
+          <div *ngIf="isLoading" class="spinner-border text-success" role="status">
+            <span class="sr-only"></span>
+        </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <span>Already have an account? <a routerLink="/auth/login">Login</a></span>
+          <p></p>
+        </form>
+      </div>
+    </div>
+  </div>
+  

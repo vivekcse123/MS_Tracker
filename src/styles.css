@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Define light theme variables */
+:root {
+    --background-color-light: #ffffff;
+    --text-color-light: #000000;
+    --button-background-light: #f0f0f0;
+    --button-color-light: #000000;
+  }
+  
+  /* Define dark theme variables */
+  [data-theme="dark"] {
+    --background-color-light: #121212;
+    --text-color-light: #ffffff;
+    --button-background-light: #333333;
+    --button-color-light: #ffffff;
+  }
+  
+  /* Apply theme styles globally */
+  body {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    transition: all 0.3s ease;
+  }
+  
+  button {
+    background-color: var(--button-background-light);
+    color: var(--button-color-light);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .container, .container-sm, .container-lg, .container-fluid, .card, .box {
+    background-color: var(--background-color-black);
+    color: var(--text-color-black); 
+    transition: background-color 0.3s, color 0.3s ease;
+    color: black;
+    background-color: var(--mat-card-background-light);
+  }
+  

@@ -1,0 +1,16 @@
+.container-fluid {
+    background-color: #f8f9fa;
+    color: #464e55;
+    position: fixed;
+    top: 92vh;
+}
+
+.container-fluid p {
+    font-size: 1.5rem; 
+    
+    font-weight: bold;
+}
+
+.container-fluid span {
+    font-size: 0.9rem;
+}

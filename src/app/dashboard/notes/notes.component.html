@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <h2>M-Tracker -> Home -> Notes</h2>
+    <hr>
+    <h2>Create Notes</h2>
+    <div class="row-2">
+        <div class="col">
+            <mat-card>
+                <form [formGroup]="createNoteForm">
+                    <input type="text" class="form-control" placeholder="Write your note...." formControlName="note">
+                    <div *ngIf="createNoteForm.get('note')?.invalid && submitted">
+                        <small *ngIf="createNoteForm.get('note')?.errors?.['required']" class="alert alert-danger">
+                            Input is required..!
+                        </small>
+                        <small *ngIf="createNoteForm.get('note')?.errors?.['minlength']" class="alert alert-danger">
+                            Minimum 10 characters are required...!
+                        </small>
+                    </div>
+                    <div *ngIf="message">
+                        <small class="alert alert-success">{{message}}</small>
+                    </div>
+                    <button class="btn btn-primary" (click)="createNote()">Create Note</button>
+                </form>       
+            </mat-card>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

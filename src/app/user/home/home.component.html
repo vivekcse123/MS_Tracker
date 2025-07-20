@@ -1,0 +1,73 @@
+<app-user-header></app-user-header>
+<div class="container-fluid">
+    <h2>User -> Home | Dashboard</h2>
+    <hr>
+    <h2>Quickly Access</h2>
+    <!-- <div class="row-2">
+        <mat-card class="p-2">
+            <p>Quick Access</p>
+            <div class="col p-2">
+                <p>Current Date & Time</p>
+                <p id="my_date">{{curr_date}} | {{curr_time}}</p>
+                <a routerLink = "/user/{{userId}}/me" class="btn btn-primary">View Profile</a>
+                <a routerLink = "/user/{{userId}}/apply" class="btn btn-primary m-3">Apply WFH</a>
+                <a routerLink = "/user/{{userId}}/note" class="btn btn-primary">Create Notes</a>
+            </div>       
+            <div class="col">
+                <mat-card class="p-4">
+                </mat-card>
+            </div> 
+        </mat-card>
+    </div> -->
+   <mat-card class="p-2">
+    <div class="row p-2">
+        <div class="col">
+            <a routerLink = "/user/{{userId}}/me" class="btn btn-primary">View Profile</a>
+            <a routerLink = "/user/{{userId}}/apply" class="btn btn-primary m-3">Apply WFH</a>
+            <a routerLink = "/user/{{userId}}/note" class="btn btn-primary">Create Notes</a>
+        </div>
+        <div class="col">
+            <h3>Current Date & Time</h3>
+            <p id="my_date">{{curr_date}} | {{curr_time}}</p>
+        </div>
+    </div>
+   </mat-card>
+    <div class="row">
+        <div class="col" id="left-col">
+            <mat-card class="p-4">
+                <h3>WFH Status</h3>
+                <div>
+                    <p id="request">Last Request status:  {{ userData[userData.length - 1]?.message }} | Status: {{ userData[userData.length - 1]?.status }}</p>
+                </div>
+            </mat-card>
+            <h2>Your Notes</h2>
+            <mat-card class="p-4" id="my_notes">
+                <div *ngIf="notes.length > 0; else nonotes">
+                <div [ngStyle] = "{'color': isSuccess ? 'green' : 'red'}" class="bottom-message alert alert-info text-center" role="alert" *ngIf="message">
+                    {{message}}
+                  </div>
+                    <mat-list *ngFor="let note of notes;">
+                        <mat-list-item>
+                            {{note.note}}
+                            <button class="btn btn-danger" (click)="delete(note.id)">Delete</button>
+                        </mat-list-item>
+                        <mat-divider></mat-divider>
+                    </mat-list>
+                    </div>
+                    <ng-template #nonotes>
+                        <p>No notes appear...</p>
+                    </ng-template>
+            </mat-card>
+        </div>
+        <div class="col p-2">
+            <h2>Your WFH History</h2>
+            <mat-card class="p-4" id="right-col">
+                <mat-list *ngFor="let data of userData">
+                    <mat-list-item>{{user?.name}} : {{data.p_date}}</mat-list-item>
+                    <mat-divider></mat-divider>
+                </mat-list>
+            </mat-card>
+        </div>
+    </div>
+</div>
+<app-user-footer></app-user-footer>

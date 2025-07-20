@@ -1,0 +1,114 @@
+.social {
+    width: 100%;
+    height: 60px;
+    text-align: right;
+    position: fixed;
+    z-index: 1;
+    padding-top: 10px;
+}
+.social a {
+    width: 40px;
+    height: 40px;
+    margin: -5px 10px; 
+    background-color: rgb(56, 67, 112);
+    border-radius: 100px;
+    text-decoration: none;
+    line-height: 40px; 
+    text-align: center; 
+    color: white;
+    transition: color 0.3s, background-color 0.3s;
+}
+.social a:hover{
+    background-color: transparent;
+    border: 1px solid rgb(56, 67, 112);
+    color: rgb(56, 67, 112);
+}
+.container-fluid{
+    position: fixed;
+    top: 50px;
+    z-index: 1;
+}
+#logo h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+.container-fluid{
+    padding: 20px;
+    background-color: rgb(14, 158, 74);
+}
+.form-control{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  } 
+.form-group i {
+    font-size: 35px;
+    margin-left: -45px;
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+    opacity: 0.5;
+  }
+  .col-4 {
+    width: 60%;
+  }
+.col-4 nav ul li a{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.active-link {
+    font-weight: bold;
+    color: green;
+    border-bottom: 1px solid white;
+    color: black;
+}
+.profile p{
+    background-color: white;
+    border-radius: 100px;
+    font-size: 20px;
+    padding: 15px 15px 15px 15px;
+    margin: 10px 30px;
+    font-weight: bold;
+}
+#fname{
+    letter-spacing: 2px;
+    border-radius: 100%;
+}
+.dropdown-menu {
+    left: 50% !important;         
+    transform: translateX(-50%) !important;
+    top: 65px;
+    width: 240px;
+}
+.dropdown-menu button{
+    border-radius: 30px;
+}
+.col ul li a{
+    padding: 12px;
+}
+.col ul li a:hover{
+   background-color: rgb(15, 16, 16);
+   cursor: pointer;
+}
+#btn{
+    margin: 0px 10px;
+    padding: 10px;
+}
+mat-slide-toggle {
+    margin-left: 10px;          
+    margin-right: 10px;        
+    transform: scale(1.1);   
+}
+mat-icon{
+    position: relative;
+    top: 5px;
+    margin: 0px 4px;
+}

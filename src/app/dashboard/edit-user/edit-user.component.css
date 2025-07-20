@@ -1,0 +1,73 @@
+/* .container-lg{
+    position: relative;
+    top: 200px;
+    padding: 10px;
+ }
+ .container-lg form{
+     max-height: 62vh;
+     height: 62vh;
+     overflow-y: auto;
+ }
+ .container-lg form label{
+    position: relative;
+    top: 15px;
+    margin: 0px 32px;
+    font-size: 18px;
+    font-weight: bold;
+ }
+ .container-lg form input, select{
+     width: 90%;
+     padding: 16px;
+     margin: 20px auto;
+     margin-right: 100px;
+     font-size: 18px;
+ }
+ .container-lg form button{
+     padding: 14px 30px;
+     margin: 0px 30px;
+ }
+ small{
+     margin: 10px 30px;
+     padding: 10px;
+     position: relative;
+     top: -10px;
+ } */
+
+ .container-fluid{
+    position: relative;
+    top: 200px;
+    z-index: 0;
+    position: fixed;
+}
+.container-fluid h2{
+    background-color: rgb(237, 244, 245);
+    padding: 10px;
+    border-radius: 5px;
+}
+form{
+    height: 57vh;
+    max-height: 57vh;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+form label{
+    position: relative;
+    top: 14px;
+    margin: 0px 32px;
+    font-size: 19px;
+ }
+form input, select{
+    width: 97%;
+    padding: 15px;
+    margin: 15px auto;
+}
+form button{
+    padding: 14px 30px;
+    margin: 10px 30px;
+}
+small{
+    margin: 10px 30px;
+    padding: 10px;
+    position: relative;
+    top: -10px;
+}

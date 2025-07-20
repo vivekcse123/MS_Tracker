@@ -1,0 +1,41 @@
+<div class="social">
+    <span>Connect with us: </span>
+    <a href="https://www.linkedin.com/in/vivek-kumar-v/" target="_blank" class="fa fa-linkedin"></a>
+    <a href="#" class="fa fa-facebook" target="_blank"></a>
+    <a href="#" class="fa fa-instagram" target="_blank"></a>
+    <a href="#" class="fa fa-youtube" target="_blank"></a>
+    <span>Email us: </span>
+    <a href="mailto:vermavivek0402@gmail.com" class="fa fa-" target="_blank">&#9993;</a>
+  </div>
+  <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-3" id="logo">
+          <h1>M-Tracker</h1>
+        </div>
+        <div class="col-4 d-flex justify-content-end">
+          <nav>
+            <ul class="nav justify-content-end">
+              <li class="nav-item"><a class="nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" routerLink="/user/{{userId}}/home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" routerLink="/user/{{userId}}/apply">Apply WFH</a></li>
+              <li class="nav-item"><a class="nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" routerLink="/user/{{userId}}/note">Notes</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col">
+          <div class="dropdown" data-bs-theme="dark" [class.show]="isDropdownOpen" style="position: relative; display: inline-block;">
+            <button class="btn btn-secondary dropdown-toggle" type="button" (click)="toggleDropdown()">
+              <span id="fname">{{name}}</span>
+            </button>
+            <ul class="dropdown-menu" [class.show]="isDropdownOpen" aria-labelledby="dropdownMenuButtonDark">
+              <li><a class="dropdown-item" routerLink="/user/{{userId}}/me">{{name}} (User)<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="person"></mat-icon>
+              </a></li>
+              <li><a class="dropdown-item" [routerLink]="['/auth/change']">Change Password<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="key"></mat-icon>
+              </a></li>
+              <li><a class="dropdown-item" routerLink="/auth/login" id="demo">Logout <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="logout"></mat-icon></a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li id="btn">Light<mat-slide-toggle></mat-slide-toggle>Dark</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>

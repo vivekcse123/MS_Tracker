@@ -1,0 +1,28 @@
+.container-fluid{
+    position: relative;
+    top: 200px;
+    z-index: 0;
+    position: fixed;
+}
+.container-fluid h2{
+    background-color: rgb(237, 244, 245);
+    padding: 10px;
+    border-radius: 5px;
+}
+.container-fluid form{
+    padding: 10px;
+}
+.container-fluid form input{
+    padding: 20px;
+    width: 95%;
+    margin: 30px 30px;
+}
+.container-fluid form button{
+    padding: 15px 30px;
+    margin: 10px 30px;
+}
+small{
+    margin: -15px 30px;
+    position: relative;
+    top: -10px;
+}
