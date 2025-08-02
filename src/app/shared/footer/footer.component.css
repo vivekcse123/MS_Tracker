@@ -1,16 +1,22 @@
-.container-fluid {
-    background-color: #f8f9fa;
-    color: #464e55;
-    position: fixed;
-    top: 92vh;
+.footer-bg {
+  background: linear-gradient(to right, #007bff, #6610f2);
+  font-family: 'Segoe UI', sans-serif;
+  border-top: 4px solid #0d6efd;
 }
 
-.container-fluid p {
-    font-size: 1.5rem; 
-    
-    font-weight: bold;
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
-.container-fluid span {
-    font-size: 0.9rem;
+.footer-divider {
+  width: 120px;
+  height: 2px;
+  background-color: #ffffff;
+  border: none;
+}
+
+footer p,
+footer h5 {
+  color: #f1f1f1;
 }

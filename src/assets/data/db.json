@@ -6,8 +6,8 @@
       "email": "vermavivek0402@gmail.com",
       "gender": "male",
       "mobile": "8429608353",
-      "password": "vivek123",
-      "cpassword": "vivek123",
+      "password": "vivu2245",
+      "cpassword": "vivu2245",
       "password_hint": "vivu123"
     },
     {
@@ -64,15 +64,15 @@
       "id": "1"
     },
     {
-      "id": "ecee",
-      "name": "Aman Gupta",
-      "email": "aman12@gmail.com",
+      "name": "Saloni Gupta",
+      "email": "saloni12@gmail.com",
       "mobile": "3456432433",
       "p_date": "2025-07-25",
       "created_date": "2025-07-25",
       "department": "Content",
       "reporting_manager": "Krishna",
-      "password": ""
+      "password": "saloni123",
+      "id": "ecee"
     },
     {
       "id": "a1b0",
@@ -125,6 +125,10 @@
     {
       "id": "a6bd",
       "note": "sdefdfsdefe"
+    },
+    {
+      "id": "7d14",
+      "note": "Need to update the Employee dashboard aswell"
     }
   ],
   "usernotes": [
