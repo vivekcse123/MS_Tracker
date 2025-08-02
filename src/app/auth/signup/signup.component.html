@@ -50,6 +50,7 @@
           </div>
 
           <!--mobile-->
+          <div class="form-group">
           <input type="text" class="form-control" placeholder="Mobile" formControlName="mobile"/>
           <div *ngIf="submitted && signUpForm.get('mobile')?.invalid">
             <small *ngIf="signUpForm.get('mobile')?.errors?.['required']" class="alert alert-danger">
@@ -58,6 +59,7 @@
             <small *ngIf="signUpForm.get('mobile')?.errors?.['pattern']" class="alert alert-danger">
               Invalid mobile!
             </small>
+          </div>
           </div>
 
           <!--password-->
@@ -102,9 +104,9 @@
             </small>
           </div>
           </div>
-
-          
-          <div *ngIf="error" class="alert alert-danger">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <span>Already have an account? <a routerLink="/auth/login">Login</a></span>
+                    <div *ngIf="error" class="alert alert-danger">
             {{ error }}
         </div>
         <div *ngIf="success" class="alert alert-success">
@@ -113,9 +115,6 @@
           <div *ngIf="isLoading" class="spinner-border text-success" role="status">
             <span class="sr-only"></span>
         </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-          <span>Already have an account? <a routerLink="/auth/login">Login</a></span>
-          <p></p>
         </form>
       </div>
     </div>

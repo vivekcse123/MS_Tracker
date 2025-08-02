@@ -1,51 +1,71 @@
-<div class="social">
-  <span>Connect with us: </span>
-  <a href="https://www.linkedin.com/in/vivek-kumar-v/" target="_blank" class="fa fa-linkedin"></a>
-  <a href="#" class="fa fa-facebook" target="_blank"></a>
-  <a href="#" class="fa fa-instagram" target="_blank"></a>
-  <a href="#" class="fa fa-youtube" target="_blank"></a>
-  <span>Email us: </span>
-  <a href="mailto:vermavivek0402@gmail.com" class="fa fa-" target="_blank">&#9993;</a>
-</div>
-<div class="container-fluid">
-    <div class="row align-items-center">
-      <div class="col-3" id="logo">
-        <h1>M-Tracker</h1>
-      </div>
-      <div class="col-4">
-        <nav>
-          <ul class="nav justify-content-end">
-            <li class="nav-item"><a class="nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" routerLink="/dashboard/{{adminId}}/home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" routerLink="/dashboard/{{adminId}}/home/lists">Users Lists</a></li>
-            <li class="nav-item"><a class="nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" routerLink="/dashboard/{{adminId}}/home/create">Create User</a></li>
-            <li class="nav-item"><a class="nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" routerLink="/dashboard/{{adminId}}/home/manage">Manage Users</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="col-4 d-flex justify-content-center">
-        <form [formGroup]="searchUserForm" (ngSubmit)="searchUserByName()">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search users..." formControlName="fname" name="fname">
-            <i class="material-icons" (click)="searchUserByName()">person_search</i>
-            <!-- <button type="submit" class="btn btn-primary">Search</button> -->
-          </div>
-        </form>
-      </div>
-      <div class="col">
-        <div class="dropdown" data-bs-theme="dark" [class.show]="isDropdownOpen" style="position: relative; display: inline-block;">
-          <button class="btn btn-secondary dropdown-toggle" type="button" (click)="toggleDropdown()">
-            <span id="fname">{{ adminName?.charAt(0) }}{{ adminName?.split(' ')[1]?.charAt(0) }}</span>  <!-- Add optional chaining to prevent errors -->
+<header class="navbar navbar-expand-lg main-header shadow-sm">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand fw-bold text-dark" href="#">M-Tracker</a>
+
+    <!-- Mobile Toggle Button -->
+    <button class="btn d-lg-none border-0 text-dark" type="button" (click)="isMenuOpen = !isMenuOpen">
+      <i class="material-icons">menu</i>
+    </button>
+
+    <!-- Collapsible Nav Content -->
+    <div class="collapse navbar-collapse" [class.show]="isMenuOpen || isDesktop">
+
+      <!-- Navigation Links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard/{{adminId}}/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard/{{adminId}}/home/lists" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Users List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard/{{adminId}}/home/create" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Create User</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard/{{adminId}}/home/manage" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Manage Users</a>
+        </li>
+      </ul>
+
+      <!-- Search Bar -->
+      <form class="d-flex align-items-center me-3 search-form" [formGroup]="searchUserForm" (ngSubmit)="searchUserByName()">
+        <div class="input-group">
+          <input type="text" class="form-control search-input" placeholder="Search users..." formControlName="fname" name="fname">
+          <button class="btn search-btn" type="submit">
+            <i class="material-icons">search</i>
           </button>
-          <ul class="dropdown-menu" [class.show]="isDropdownOpen" aria-labelledby="dropdownMenuButtonDark">
-            <li><a class="dropdown-item" routerLink="/dashboard/{{adminId}}/home/me">{{adminName}} (Admin) <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="dashboard"></mat-icon>
-            </a></li>
-            <li><a class="dropdown-item" [routerLink]="['/auth/forgot']">Change Password<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="key"></mat-icon>
-            </a></li>
-            <li><a class="dropdown-item" routerLink="/auth/login" id="demo">Logout <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="logout"></mat-icon></a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li id="btn">Light<mat-slide-toggle (click)="toggleTheme()"></mat-slide-toggle>Dark</li>
-          </ul>
         </div>
+      </form>
+
+      <!-- Profile Dropdown -->
+      <div class="dropdown profile-dropdown" [class.show]="isDropdownOpen">
+        <button class="btn profile-btn dropdown-toggle" type="button" (click)="toggleDropdown()">
+          {{ adminName?.charAt(0) }}{{ adminName?.split(' ')[1]?.charAt(0) }}
+        </button>
+        <ul class="dropdown-menu profile-menu" [class.show]="isDropdownOpen">
+          <li>
+            <a class="dropdown-item" routerLink="/dashboard/{{adminId}}/home/me">
+              {{adminName}} (Admin) <mat-icon fontIcon="dashboard"></mat-icon>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" [routerLink]="['/auth/forgot']">
+              Change Password <mat-icon fontIcon="key"></mat-icon>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="/auth/login">
+              Logout <mat-icon fontIcon="logout"></mat-icon>
+            </a>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li class="dropdown-item d-flex justify-content-between align-items-center">
+            Light <mat-slide-toggle (click)="toggleTheme()">Dark</mat-slide-toggle>
+          </li>
+        </ul>
       </div>
+
     </div>
-</div>
+  </div>
+</header>

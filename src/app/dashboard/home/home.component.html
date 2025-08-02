@@ -1,65 +1,93 @@
 <app-header></app-header>
-<div class="container-fluid">
-    <h2>M-Tracker -> Dashboard | Home</h2>
-    <hr>
-    <h2>Quickly Access</h2>
-    <div class="row">
-        <mat-card class="p-3 m-2">
-            <p>Quick Actions</p>
-            <div class="col">
-                <a routerLink="/dashboard/{{adminId}}/home/lists" class="btn btn-primary">Users Lists</a>
-                <a routerLink="/dashboard/{{adminId}}/home/create" class="btn btn-primary">Create New User</a>
-                <a routerLink="/dashboard/{{adminId}}/home/manage" class="btn btn-primary">Manage Users</a>
-                <a routerLink="/dashboard/{{adminId}}/home/notes" class="btn btn-primary">Create Notes</a>
-            </div>
-        </mat-card>
-    </div><br>
-    <h2>All Features</h2>
-    <div class="row">
-        <div class="col" id="left-col">
-            <mat-card class="p-3">
-                <p>Inbox (All messages will appear here)</p>
-                <div *ngIf="visibleUsers.length > 0; else noRequest">
-                    <div *ngFor="let data of allWFH;">
-                        <div *ngIf="!data.isHidden">
-                            <span>Request from {{data.name}} | Message: {{data.message}}</span>
-                            <button class="btn btn-primary m-2" (click)="approved(data)">Approved</button>
-                            <button class="btn btn-danger" (click)="reject(data)">Reject</button>
-                        </div>
-                    </div>
-                </div>
-                <ng-template #noRequest>
-                    <div [ngStyle] = "{'color': isSuccess ? 'green' : 'red'}" class="bottom-message alert alert-info text-center" role="alert" *ngIf="approvedMessage">
-                        {{approvedMessage}}
-                    </div>
-                    <p>No active requests.</p>
-                 </ng-template>
-            </mat-card>
-            <mat-card class="p-3">
-                <p> Date & Time (Current date & time)</p>
-                <span>Date: {{current_date}} | Time: {{current_time}}</span>
-            </mat-card>
-            <mat-card class="p-3">
-                <p>Working From Home (Employee working WFH)</p>
-                <span>No employee working from home!</span>
-            </mat-card>
-            <mat-card class="p-3">
-                <p>Coming Date (Upcoming employee date)</p>
-                <span>Upcoming!</span>
-            </mat-card>
-        </div>
-        <div class="col">
-            <h2>Notes (All notes will appear here)</h2>
-            <div [ngStyle] = "{'color': isSuccess ? 'green' : 'red'}" class="bottom-message alert alert-info text-center" role="alert" *ngIf="message">
-                {{message}}
-              </div>
-            <mat-card class="p-3" id="my-card">
-                <mat-list class="list" *ngFor="let notes of allNotes;">
-                    <mat-list-item *ngIf="notes">{{notes.note}} <a (click)="deleteNote(notes.id)" title="Delete note"> <mat-icon aria-hidden="false" fontIcon="close"></mat-icon></a></mat-list-item>
-                    <mat-divider></mat-divider>
-                </mat-list>
-            </mat-card>
-        </div>
+
+<div class="container-fluid py-5 dashboard-bg">
+  <div class="mb-5 text-center">
+    <h2 class="dashboard-title">📊 M-Tracker <span class="text-muted">→ Dashboard | Home</span></h2>
+    <hr class="divider">
+  </div>
+
+  <!-- Quick Access Section -->
+  <section class="mb-5">
+    <h4 class="section-heading">🚀 Quick Access</h4>
+    <div class="card-glass p-4">
+      <p class="text-muted fw-bold mb-3">Common Actions</p>
+      <div class="d-flex flex-wrap gap-3">
+        <a routerLink="/dashboard/{{adminId}}/home/lists" class="btn-neo btn-neo-primary">👥 Users List</a>
+        <a routerLink="/dashboard/{{adminId}}/home/create" class="btn-neo btn-neo-success">➕ Create User</a>
+        <a routerLink="/dashboard/{{adminId}}/home/manage" class="btn-neo btn-neo-warning">🛠 Manage Users</a>
+        <a routerLink="/dashboard/{{adminId}}/home/notes" class="btn-neo btn-neo-info">📝 Add Notes</a>
+      </div>
     </div>
+  </section>
+
+  <!-- All Features -->
+  <section>
+    <h4 class="section-heading mb-4">📌 Features & Updates</h4>
+    <div class="row g-4">
+      <!-- Left Column -->
+      <div class="col-md-6">
+        <!-- Inbox -->
+        <div class="feature-card">
+          <h5 class="feature-title"><i class="bi bi-envelope-fill me-2 text-primary"></i>Inbox</h5>
+          <div *ngIf="visibleUsers.length > 0; else noRequest">
+            <div *ngFor="let data of allWFH;">
+              <div *ngIf="!data.isHidden" class="border-bottom py-3">
+                <p class="mb-2"><strong>{{data.name}}</strong>: {{data.message}}</p>
+                <button class="btn btn-sm btn-outline-success me-2" (click)="approved(data)">✔ Approve</button>
+                <button class="btn btn-sm btn-outline-danger" (click)="reject(data)">✖ Reject</button>
+              </div>
+            </div>
+          </div>
+          <ng-template #noRequest>
+            <div *ngIf="approvedMessage" [ngStyle]="{'color': isSuccess ? 'green' : 'red'}" class="alert alert-light text-center mt-3">
+              {{approvedMessage}}
+            </div>
+            <p class="text-muted mt-2">No active requests.</p>
+          </ng-template>
+        </div>
+
+        <!-- Date & Time -->
+        <div class="feature-card">
+          <h5 class="feature-title"><i class="bi bi-calendar3 me-2 text-success"></i>Date & Time</h5>
+          <p><strong>Date:</strong> {{current_date}}</p>
+          <p><strong>Time:</strong> {{current_time}}</p>
+        </div>
+
+        <!-- WFH -->
+        <div class="feature-card">
+          <h5 class="feature-title"><i class="bi bi-house-door-fill me-2 text-warning"></i>Working From Home</h5>
+          <p class="text-muted">No employee working from home.</p>
+        </div>
+
+        <!-- Coming History -->
+        <div class="feature-card">
+          <h5 class="feature-title"><i class="bi bi-clock-history me-2 text-secondary"></i>Coming History</h5>
+          <p class="text-muted">Upcoming!</p>
+        </div>
+      </div>
+
+      <!-- Right Column (Notes) -->
+      <div class="col-md-6">
+        <h5 class="feature-title mb-3">🗂 Notes</h5>
+
+        <div *ngIf="message" [ngStyle]="{'color': isSuccess ? 'green' : 'red'}" class="alert alert-info text-center mb-3">
+          {{message}}
+        </div>
+
+        <div class="note-section p-3 rounded">
+          <mat-list *ngFor="let notes of allNotes;">
+            <mat-list-item *ngIf="notes" class="d-flex justify-content-between align-items-center">
+              <span>{{notes.note}}</span>
+              <a (click)="deleteNote(notes.id)" class="text-danger" title="Delete">
+                <mat-icon fontIcon="close"></mat-icon>
+              </a>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+          </mat-list>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
+
 <app-footer></app-footer>

@@ -1,50 +1,67 @@
-.container-fluid{
-    position: relative;
-    top: 200px;
-    z-index: 0;
-    position: fixed;
+/* Inherit existing styles for page look */
+.users-bg {
+  background-color: #f8f9fc;
+  font-family: 'Segoe UI', sans-serif;
 }
-.container-fluid h2{
-    background-color: rgb(237, 244, 245);
-    padding: 10px;
-    border-radius: 5px;
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
 }
-table{
-    margin: auto;
-    text-align: center;
-    max-height: 55vh;
-    overflow-y: auto;
-    scroll-behavior: smooth;
+
+.section-divider {
+  height: 3px;
+  background: linear-gradient(to right, #007bff, #6610f2);
+  width: 180px;
+  margin: 10px auto 30px auto;
+  border: none;
 }
-table th{
-    padding: 20px;
-    font-size: 18px;
+
+.section-heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0d6efd;
 }
-table th td{
-    font-size: 18px;
+
+.user-card {
+  background-color: #ffffff;
+  border-left: 5px solid #007bff;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.my_style{
-    margin: 0px 5px;
-    padding: 8px 20px;
+
+.user-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
-.my_th_style{
-    padding: 12px;
-    font-size: 22px;
+
+/* Table customization */
+.table {
+  font-size: 0.95rem;
+  border-radius: 8px;
+  overflow: hidden;
 }
-.my_td_style{
-    padding: 10px;
-    font-size: 20px;
+
+.table th,
+.table td {
+  vertical-align: middle;
+  padding: 12px;
 }
-mat-icon{
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
-    display: flex;
+
+.table thead th {
+  background-color: #e9ecef;
+  font-weight: 600;
 }
-.no{
-    color: red;
+
+/* Button spacing */
+.btn-sm {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 6px;
 }
-.yes{
-    color: green;
+
+.alert {
+  border-radius: 6px;
+  font-size: 0.95rem;
 }

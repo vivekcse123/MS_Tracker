@@ -1,35 +1,53 @@
 <app-header></app-header>
-<div class="container-fluid">
-    <h2>M-Tracker -> Home -> View User</h2>
-    <hr>
-    <h2>User Details</h2>
-    <div class="row-2">
-        <div class="col">
-            <mat-card>
-                <mat-list>
-                    <mat-list-item><p>Name: {{userDetails?.name}}</p></mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item><p>Email: {{userDetails?.email}}</p></mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item><p>Mobile: {{userDetails?.mobile}}</p></mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item><p>Period Date: <span id="my_date">{{userDetails?.p_date}}</span></p></mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item><p>Expected Period Date: {{startDate}} to {{endDate}}</p></mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item><p>Created Date: {{userDetails?.created_date}}</p></mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item><p>Department: {{userDetails?.department}}</p></mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item><p>Reporting Manager: {{userDetails?.reporting_manager}}</p></mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item>
-                        <button class="btn btn-primary" (click)="back()">Go Users Lists</button>
-                        <button class="btn btn-primary" (click)="manage()">Go Manage Users</button>
-                    </mat-list-item>
-                </mat-list>
-            </mat-card>
-        </div>
+
+<div class="container-fluid py-5 users-bg">
+  <div class="text-center mb-4">
+    <h2 class="page-title">👁️ M-Tracker → Home → View User</h2>
+    <hr class="section-divider">
+  </div>
+
+  <h4 class="section-heading mb-4">👤 User Details</h4>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <mat-card class="p-4 shadow-sm user-card">
+        <mat-list>
+          <mat-list-item><strong>Name:</strong> {{ userDetails?.name }}</mat-list-item>
+          <mat-divider></mat-divider>
+
+          <mat-list-item><strong>Email:</strong> {{ userDetails?.email }}</mat-list-item>
+          <mat-divider></mat-divider>
+
+          <mat-list-item><strong>Mobile:</strong> {{ userDetails?.mobile }}</mat-list-item>
+          <mat-divider></mat-divider>
+
+          <mat-list-item>
+            <strong>Period Date:</strong>
+            <span id="my_date">{{ userDetails?.p_date }}</span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+
+          <mat-list-item>
+            <strong>Expected Period Date:</strong> {{ startDate }} → {{ endDate }}
+          </mat-list-item>
+          <mat-divider></mat-divider>
+
+          <mat-list-item><strong>Created Date:</strong> {{ userDetails?.created_date }}</mat-list-item>
+          <mat-divider></mat-divider>
+
+          <mat-list-item><strong>Department:</strong> {{ userDetails?.department }}</mat-list-item>
+          <mat-divider></mat-divider>
+
+          <mat-list-item><strong>Reporting Manager:</strong> {{ userDetails?.reporting_manager }}</mat-list-item>
+          <mat-divider></mat-divider>
+
+          <mat-list-item class="d-flex justify-content-end">
+            <button class="btn btn-outline-primary btn-sm me-2" (click)="back()">🔙 Go to Users List</button>
+            <button class="btn btn-outline-secondary btn-sm" (click)="manage()">🛠️ Manage Users</button>
+          </mat-list-item>
+        </mat-list>
+      </mat-card>
     </div>
+  </div>
 </div>
+
 <app-footer></app-footer>

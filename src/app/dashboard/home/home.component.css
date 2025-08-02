@@ -1,48 +1,102 @@
-.container-fluid{
-    position: relative;
-    top: 200px;
-    position: fixed;
-    z-index: 0;
+/* Base Container */
+.dashboard-bg {
+  background: #f4f6f9;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  padding: 30px;
 }
-.container-fluid h2{
-    background-color: rgb(237, 244, 245);
-    padding: 10px;
-    border-radius: 5px;
+
+/* Page Title */
+.dashboard-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
 }
-.row .col a{
-    margin: 0px 10px;
+
+.divider {
+  height: 4px;
+  background: linear-gradient(to right, #007bff, #6610f2);
+  width: 180px;
+  margin: 15px auto 30px auto;
+  border: none;
 }
-#my-card{
-    height: 29.5vh;
-    max-height: 29.5vh;
-    overflow-y: auto;
-    font-size: 20px;
-    scroll-behavior: smooth;
+
+/* Section Headings */
+.section-heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #0d6efd;
 }
-#my-card a{
-    float: right;
-    padding: 10px;
-    color: red;
+
+/* Cards */
+.card-glass, .feature-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
-#my-card a mat-icon{
-    font-size: 30px;
-    cursor: pointer;
-    position: relative;
-    top: -10px;
+
+/* Feature Card border styling */
+.feature-card {
+  border-left: 6px solid #007bff;
 }
-#left-col{
-    height: 36vh;
-    max-height: 36vh;
-    overflow-y: auto;
-    scroll-behavior: smooth;
+
+/* Feature Titles */
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
-#left-col mat-card{
-    margin: 12px 0px;
-    position: relative;
-    top: -10px;
+
+/* Buttons */
+.btn-neo {
+  font-size: 1rem;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
-#all-request{
-    position: relative;
-    top: -30px;
-    background-color: red;
+
+.btn-neo:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+.btn-neo-primary {
+  background-color: #007bff;
+}
+.btn-neo-success {
+  background-color: #28a745;
+}
+.btn-neo-warning {
+  background-color: #ffc107;
+  color: #000;
+}
+.btn-neo-info {
+  background-color: #17a2b8;
+}
+
+/* Note Section */
+.note-section {
+  background: #ffffff;
+  border-left: 6px solid #6f42c1;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.04);
+  margin-top: 10px;
+}
+
+/* List Items in Notes */
+mat-list-item {
+  font-size: 1rem;
+  padding: 10px 0;
 }

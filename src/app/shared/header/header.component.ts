@@ -77,9 +77,15 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  toggleDropdown() {
-    this.isDropdownOpen = !this.isDropdownOpen;
-  }
+  isMenuOpen: boolean = false;
+
+toggleDropdown() {
+  this.isDropdownOpen = !this.isDropdownOpen;
+}
+
+get isDesktop(): boolean {
+  return window.innerWidth >= 992;
+}
 
   toggleTheme(): void {
     this.isDarkMode = !this.isDarkMode;

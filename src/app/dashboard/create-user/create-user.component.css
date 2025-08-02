@@ -1,32 +1,43 @@
-.container-fluid{
-    position: relative;
-    top: 200px;
-    z-index: 0;
-    position: fixed;
+/* Form control spacing */
+form .form-control {
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 1rem;
 }
-.container-fluid h2{
-    background-color: rgb(237, 244, 245);
-    padding: 10px;
-    border-radius: 5px;
+
+form .mb-3 {
+  margin-bottom: 1.2rem;
 }
-form{
-    height: 55vh;
-    max-height: 55vh;
-    overflow: auto;
-    scroll-behavior: smooth;
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
 }
-form input, select{
-    width: 97%;
-    padding: 15px;
-    margin: 15px auto;
+
+.section-divider {
+  height: 3px;
+  background: linear-gradient(to right, #007bff, #6610f2);
+  width: 180px;
+  margin: 10px auto 30px auto;
+  border: none;
 }
-form button{
-    padding: 14px 30px;
-    margin: 0px 30px;
+.section-heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0d6efd;
 }
-small{
-    margin: 10px 30px;
-    padding: 10px;
-    position: relative;
-    top: -10px;
-} 
+
+/* Align submit button nicely */
+form .btn-primary {
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  padding: 10px 20px;
+}
+
+/* Small error message style */
+.text-danger {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.875rem;
+}

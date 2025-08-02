@@ -1,30 +1,43 @@
 <app-header></app-header>
-<div class="container-fluid">
-    <h2>M-Tracker -> Home -> Admin Profile</h2>
-    <hr>
-    <h2>Admin Details</h2>
-    <div class="row-2">
-        <div class="col">
-            <mat-card>
-                <mat-list>
-                    <mat-list-item><p>ID: {{adminDetails.id}}</p></mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item><p>Full Name: {{adminDetails.fname}}</p></mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item><p>Email: {{adminDetails.email}}</p></mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item><p>Mobile: {{adminDetails.mobile}}</p></mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item><p>Gender: {{adminDetails.gender.charAt(0).toUpperCase() + adminDetails.gender.slice(1)}}</p></mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item><p>Password Hint: {{adminDetails.password_hint}}</p></mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item>
-                        <a routerLink="/dashboard/{{adminId}}/home" class="btn btn-primary">Go Dashboard</a>
-                    </mat-list-item>
-                   </mat-list>
-            </mat-card>
-        </div>
+
+<div class="container-fluid py-5 admin-profile-bg">
+  <div class="text-center mb-4">
+    <h2 class="page-title">👨‍💼 M-Tracker → Home → Admin Profile</h2>
+    <hr class="section-divider">
+  </div>
+
+  <h4 class="section-heading mb-4">📋 Admin Details</h4>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <mat-card class="profile-card p-4 shadow-sm">
+        <mat-list>
+          <mat-list-item><strong>ID:</strong>&nbsp; {{adminDetails.id}}</mat-list-item>
+          <mat-divider></mat-divider>
+
+          <mat-list-item><strong>Full Name:</strong>&nbsp; {{adminDetails.fname}}</mat-list-item>
+          <mat-divider></mat-divider>
+
+          <mat-list-item><strong>Email:</strong>&nbsp; {{adminDetails.email}}</mat-list-item>
+          <mat-divider></mat-divider>
+
+          <mat-list-item><strong>Mobile:</strong>&nbsp; {{adminDetails.mobile}}</mat-list-item>
+          <mat-divider></mat-divider>
+
+          <mat-list-item>
+            <strong>Gender:</strong>&nbsp; {{adminDetails.gender.charAt(0).toUpperCase() + adminDetails.gender.slice(1)}}
+          </mat-list-item>
+          <mat-divider></mat-divider>
+
+          <mat-list-item><strong>Password Hint:</strong>&nbsp; {{adminDetails.password_hint}}</mat-list-item>
+          <mat-divider></mat-divider>
+
+          <mat-list-item class="text-center mt-3">
+            <a routerLink="/dashboard/{{adminId}}/home" class="btn btn-primary btn-lg">← Go to Dashboard</a>
+          </mat-list-item>
+        </mat-list>
+      </mat-card>
     </div>
+  </div>
 </div>
+
 <app-footer></app-footer>
