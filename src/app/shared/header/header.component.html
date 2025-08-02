@@ -55,9 +55,10 @@
             </a>
           </li>
           <li>
-            <a class="dropdown-item" routerLink="/auth/login">
+            <!-- <a class="btn primary-btn" (click)="logOut()">
               Logout <mat-icon fontIcon="logout"></mat-icon>
-            </a>
+            </a> -->
+            <button (click)="logOut()" class="btn primary-btn">Logout</button>
           </li>
           <li><hr class="dropdown-divider"></li>
           <li class="dropdown-item d-flex justify-content-between align-items-center">

@@ -4,6 +4,7 @@ import { AuthService } from '../../services/auth.service';
 import { Router, RouterLink } from '@angular/router';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { CommonModule } from '@angular/common';
+import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './login.component.css'
 })
 export class LoginComponent implements OnInit{
-  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router){}
+  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router, private authS: LoginService){}
   submitted = false;
   isLoading : boolean = false;
   loginForm: FormGroup = new FormGroup({}); 
@@ -26,9 +27,9 @@ export class LoginComponent implements OnInit{
   ngOnInit(): void {
 
   sessionStorage.setItem('adminId', "");
-  sessionStorage.setItem("isLoggedIn", "false");
+  //sessionStorage.setItem("isLoggedIn", "false");
   sessionStorage.setItem('userId', "");
-  sessionStorage.setItem("isUserLoggedIn", "false");
+  //sessionStorage.setItem("isUserLoggedIn", "false");
 
 
   this.loginForm = this.fb.group({
@@ -71,10 +72,11 @@ login(e: any){
   if (this.adminMap.has(email) && this.adminMap.get(email) === password) {
     const admin = this.admins.find((admin: { email: string }) => admin.email === email);
       if (admin) {
-        sessionStorage.setItem("isLoggedIn", "true");
+        //sessionStorage.setItem("isLoggedIn", "true");
         this.adminID = admin.id;
         this.auth.setAdminId(this.adminID);
         sessionStorage.setItem('adminId', this.adminID);
+        this.authS.setLogin(true);
         this.isLoading = true;
         this.success = "Otp send.. to your registered mailid..!";
         this.sendEmail(e);
@@ -97,7 +99,8 @@ login(e: any){
   else if (this.userMap.has(email) && this.userMap.get(email) === password) {
     const user = this.users.find((user: { email: string }) => user.email === email);
       if (user) {
-        sessionStorage.setItem("isUserLoggedIn", "true");
+        //sessionStorage.setItem("isUserLoggedIn", "true");
+        this.authS.setUserLogin(true);
         this.userID = user.id;
         //this.auth.setAdminId(this.userID);
         sessionStorage.setItem('userId', this.userID);

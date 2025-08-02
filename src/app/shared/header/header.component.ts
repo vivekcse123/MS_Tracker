@@ -3,6 +3,7 @@ import { AuthService } from '../../services/auth.service';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ThemeService } from '../../services/theme.service';
+import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-header',
@@ -23,7 +24,8 @@ export class HeaderComponent implements OnInit {
     private auth: AuthService,
     private fb: FormBuilder,
     private router: Router,
-    private themeService: ThemeService
+    private themeService: ThemeService,
+    private authS: LoginService
   ) {
     this.searchUserForm = this.fb.group({
       'fname': new FormControl('')
@@ -92,4 +94,8 @@ get isDesktop(): boolean {
     this.themeService.toggleDarkMode(this.isDarkMode);
   }
 
+  logOut(){
+    this.router.navigate(['/auth/login']);
+    this.authS.setLogin(false);
+  }
 }
